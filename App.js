@@ -1,27 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement(
-    "div", 
-    {id: "parent"},[
-        React.createElement(
-            "div", 
-            {id: "child"},[
-            React.createElement("h1", {}, "This is Namaste React🚀 || Atul Singh"),
-            React.createElement("h2", {}, "I'm a h2 tag using react 😃|| Brother of h1"),
-        ]),
-        React.createElement(
-            "div", 
-            {id: "child2"},[
-            React.createElement("h1", {}, "I'm a h1//2 Tag! || Atul Singh"),
-            React.createElement("h2", {}, "I'm a h2//2 tag!|| Brother of h1"),
-        ])
-    ]
+//React Element => Object => render => HTML Element
+const heading = (<h1 id="heading" className="head">
+    Hello react using JSX || Namaste React 🚀
+</h1>);
+console.log(heading);
+
+//React Component(functional)
+const HeadingComponent = () => {
+    return <h1 className="heading">Namaste React functional component</h1>;
+};
+
+const HeadingComponent1 = () => (
+    <div id="container">
+        <HeadingComponent />
+        <h1 className="heading">Namaste React from Nested functional component</h1>
+    </div>
 );
 
-//const heading = React.createElement('h1', {id: "heading"}, 'Hello world from React! || By Atul Shekhar Singh');
-console.log(parent);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log(root);
-root.render(parent);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent1 />);

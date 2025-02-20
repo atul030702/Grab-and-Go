@@ -1,8 +1,8 @@
 4294
 67/home/atul-kumar/Documents/namaste-react/dist/index.6bd02f5a.js.map1739875348998521809 0
-63/home/atul-kumar/Documents/namaste-react/dist/index.7826abd7.js1739891954716197048 0
-67/home/atul-kumar/Documents/namaste-react/dist/index.7826abd7.js.map1739891954742197680 0
-51/home/atul-kumar/Documents/namaste-react/index.html1739875699345644771 0
+63/home/atul-kumar/Documents/namaste-react/dist/index.7826abd7.js1739975487301686401 0
+67/home/atul-kumar/Documents/namaste-react/dist/index.7826abd7.js.map1739975487311686157 0
+51/home/atul-kumar/Documents/namaste-react/index.html1739962425626636409 0
 92/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/dist/unpacker/features.js1735813552698984222 0
 90/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/dist/unpacker/region.js1735813552997012970 0
 88/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/dist/lib/supported.js1735813553007013934 0
@@ -107,7 +107,7 @@
 107/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/data/features/focusin-focusout-events.js1735813552706984994 0
 105/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/data/features/contentsecuritypolicy.js1735813552409956343 0
 98/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/data/features/feature-policy.js1735813552696984029 0
-51/home/atul-kumar/Documents/namaste-react/.gitignore1735823375543920750 0
+51/home/atul-kumar/Documents/namaste-react/.gitignore1739894457095709779 0
 106/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/data/features/form-submit-attributes.js1735813552707985090 0
 100/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/data/features/childnode-remove.js1735813552387954220 0
 92/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/data/features/css-grid.js1735813552534968401 0
@@ -937,7 +937,7 @@
 87/home/atul-kumar/Documents/namaste-react/node_modules/react/jsx-runtime.react-server.js1739875166568131868 0
 69/home/atul-kumar/Documents/namaste-react/node_modules/react/README.md1739875166657131892 0
 95/home/atul-kumar/Documents/namaste-react/node_modules/react/cjs/react-jsx-runtime.production.js1739875166596131875 0
-56/home/atul-kumar/Documents/namaste-react/dist/index.html1739891954716197048 0
+56/home/atul-kumar/Documents/namaste-react/dist/index.html1739963223951474867 0
 99/home/atul-kumar/Documents/namaste-react/node_modules/react/cjs/react-compiler-runtime.profiling.js1739875166574131869 0
 96/home/atul-kumar/Documents/namaste-react/node_modules/react/cjs/react.react-server.production.js1739875166649131890 0
 97/home/atul-kumar/Documents/namaste-react/node_modules/react/cjs/react.react-server.development.js1739875166641131887 0
@@ -1274,7 +1274,7 @@
 103/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/source-map/parcel_sourcemap_node/index.js1735813552485963674 0
 97/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/types-internal/lib/PackageName.d.ts1735813552206936759 0
 113/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/data/features/mdn-text-decoration-shorthand.js1735813552805994544 0
-53/home/atul-kumar/Documents/namaste-react/package.json1739891953323163197 0
+53/home/atul-kumar/Documents/namaste-react/package.json1739959170036789573 0
 107/home/atul-kumar/Documents/namaste-react/node_modules/@msgpackr-extract/msgpackr-extract-linux-x64/index.js1735813550833804254 0
 71/home/atul-kumar/Documents/namaste-react/node_modules/@msgpackr-extract1739875348158518629 1
 85/home/atul-kumar/Documents/namaste-react/node_modules/htmlnano/lib/modules/custom.mjs1735813552503965411 0
@@ -1761,7 +1761,7 @@
 80/home/atul-kumar/Documents/namaste-react/node_modules/entities/lib/esm/generated1735813551483866991 1
 130/home/atul-kumar/Documents/namaste-react/node_modules/msgpackr-extract/node_modules/.bin/node-gyp-build-optional-packages-optional1735813572810916280 0
 95/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/source-map/dist/SourceMap.js.flow1735813552467961938 0
-64/home/atul-kumar/Documents/namaste-react/dist/index.3a01df49.css1739891954722197194 0
+64/home/atul-kumar/Documents/namaste-react/dist/index.3a01df49.css1739963223957474887 0
 84/home/atul-kumar/Documents/namaste-react/node_modules/entities/lib/esm/encode.js.map1735813551082828291 0
 105/home/atul-kumar/Documents/namaste-react/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/mdb_drop.c1735813552407956150 0
 85/home/atul-kumar/Documents/namaste-react/node_modules/entities/lib/esm/index.d.ts.map1735813551131833020 0
@@ -2147,7 +2147,7 @@
 83/home/atul-kumar/Documents/namaste-react/node_modules/htmlparser2/lib/esm/Parser.js1735813550769798075 0
 79/home/atul-kumar/Documents/namaste-react/node_modules/js-yaml/lib/type/pairs.js1735813551726890443 0
 86/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/fs/src/NodeFS.browser.js1735813554026112195 0
-47/home/atul-kumar/Documents/namaste-react/App.js1739877201215266621 0
+47/home/atul-kumar/Documents/namaste-react/App.js1739975640428953235 0
 103/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/transformer-babel/src/BabelTransformer.js1735813552974010751 0
 99/home/atul-kumar/Documents/namaste-react/node_modules/@swc/helpers/_/_set_prototype_of/package.json1735813552743988563 0
 84/home/atul-kumar/Documents/namaste-react/node_modules/@swc/helpers/_/_inherits_loose1735813552713985669 1
@@ -2841,7 +2841,7 @@
 109/home/atul-kumar/Documents/namaste-react/node_modules/lmdb/node_modules/node-addon-api/tools/eslint-format.js1735813554526160391 0
 85/home/atul-kumar/Documents/namaste-react/node_modules/caniuse-lite/data/regions/KE.js1735813552749989142 0
 105/home/atul-kumar/Documents/namaste-react/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/mdb_stat.11735813552308946599 0
-68/home/atul-kumar/Documents/namaste-react/dist/index.3a01df49.css.map1739891954734197485 0
+68/home/atul-kumar/Documents/namaste-react/dist/index.3a01df49.css.map1739963223977474953 0
 72/home/atul-kumar/Documents/namaste-react/node_modules/@swc/core/spack.js1735813552024919202 0
 73/home/atul-kumar/Documents/namaste-react/node_modules/srcset/package.json1735813550999820281 0
 94/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/reporter-cli/src/bundleReport.js1735813553878097925 0
@@ -3478,7 +3478,7 @@
 88/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/core/lib/serializerCore.js1735813554139123087 0
 91/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/utils/test/DefaultMap.test.js1735813553739084521 0
 91/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/core/lib/SymbolPropagation.js1735813554140123184 0
-45/home/atul-kumar/Documents/namaste-react/dist1739891954751197898 1
+45/home/atul-kumar/Documents/namaste-react/dist1739975487313686108 1
 102/home/atul-kumar/Documents/namaste-react/node_modules/@swc/helpers/cjs/_object_destructuring_empty.cjs1735813552278943705 0
 71/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/core/test1735813554147123859 1
 104/home/atul-kumar/Documents/namaste-react/node_modules/@parcel/core/test/PublicMutableBundleGraph.test.js1735813554136122798 0
