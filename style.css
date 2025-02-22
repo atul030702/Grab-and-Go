@@ -4,6 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 5px;
+    box-sizing: border-box;
 }
 
 .header{
@@ -43,9 +44,20 @@
     justify-content: space-evenly;
 }
 
-.search{
-    width: 100%;
+.filter-btn{
+    border: none;
+    width: max-content;
+    height: min-content;
     padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: #0078d7;
+    font-size: 18px;
+    font-weight: 600;
+}
+.filter-btn:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
 
 .res-card{
@@ -57,12 +69,12 @@
     padding: 10px;
     background-color: #f0f0f0;
     flex-wrap: wrap;
-    
-
-    :hover{
-        border-bottom: 1px solid #212121;
-        cursor: pointer;
-    }
+}
+.res-card:hover{
+    border: 2px solid;
+    cursor: pointer;
+    border-color: #0078d7;
+    box-shadow: 0 2px 8px rgba(0, 120, 215, 0.2);
 }
 
 .res-card > img{
@@ -76,6 +88,7 @@
 
 .restaurant-container{
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
-    margin: auto;
 }
