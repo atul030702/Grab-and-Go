@@ -1,52 +1,11 @@
-let listOfRestaurantsJS = [
-    {
-        type: "Restaurant",
-        data: {
-            id: "334475",
-            name: "KFC",
-            cuisine: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-            costForTwo: 400,
-            deliveryTime: 36,
-            avgRating: "3.8",
-            cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-        }
-    },
-    {
-        type: "Restaurant",
-        data: {
-            id: "334476",
-            name: "McDonald's",
-            cuisine: ["Burgers", "Fast Food"],
-            costForTwo: 30000,
-            deliveryTime: 30,
-            avgRating: "3.9",
-            cloudinaryImageId: "abcd1234efgh5678ijkl9101",
-        }
-    },
-    {
-        type: "Restaurant",
-        data: {
-            id: "334477",
-            name: "Subway",
-            cuisine: ["Sandwiches", "Healthy Food"],
-            costForTwo: 275,
-            deliveryTime: 25,
-            avgRating: "4.2",
-            cloudinaryImageId: "mnop1234qrst5678uvwx9101",
-        }
-    },
-    {
-        type: "Restaurant",
-        data: {
-            id: "334478",
-            name: "Meghana Foods",
-            cuisine: ["Biryani", "North Indian", "Asian"],
-            costForTwo: 280,
-            deliveryTime: 38,
-            avgRating: "4.4",
-            cloudinaryImageId: "mnop1234qrst5678uvwx9101",
-        }
-    }
-];
+async function listOfRestaurantsJS() {
+    const response = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.6183666&lng=85.0999572&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+
+    const jsonData = await response.json();
+    console.log(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+    return restaurantArray = jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+}
 
 export default listOfRestaurantsJS;
