@@ -1,2 +1,3 @@
 export const foodImage = "https://images.squarespace-cdn.com/content/v1/612d4825ee7c3b7ba3e215b7/33a0e76c-d670-4bd8-b150-64b450896b99/Delicious+food.png?format=2500w";
 export const brandLogo = "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=fast-food&sf=&txt_keyword=All";
+export const searchIcon = "https://img.icons8.com/?size=100&id=7695&format=png&color=000000";
