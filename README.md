@@ -1,7 +1,4 @@
 # Learn React with Atul...
-
-
-/**
 *Header
     -Logo
     -Nav Items
@@ -16,4 +13,6 @@
     -Links
     -Address
     -Contact
-*/
+# 2 types of Routing in web pages
+    - Client Side Routing
+    - Server Side Routing
