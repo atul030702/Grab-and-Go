@@ -198,6 +198,8 @@
         font-size: 20px;
     };
     .restaurant-info{
+        width: max-content;
+        height: min-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -217,6 +219,9 @@
                 font-size: 20px;
                 padding: 0 10px 0 25px;
             };
+        };
+        p{
+            padding: 5px;
         };
     };
 }

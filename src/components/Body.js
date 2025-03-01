@@ -3,8 +3,7 @@ import listOfRestaurantsJS from "../utils/resList.js";
 import { searchIcon } from "../utils/constants.js";
 import Shimmer from "./Shimmer.js";
 import { useState, useEffect } from "react";
-
-
+import { Link } from "react-router";
 
 const Body = () => {
     //local state variable - super powerful variable
@@ -12,7 +11,6 @@ const Body = () => {
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
     const [searchText, setSearchText] = useState("");
-    console.log("body rendered");
 
     useEffect(() => {
         async function fetchData() {
@@ -62,7 +60,9 @@ const Body = () => {
             <div className="restaurant-container">
             
                 {filteredRestaurants.map((restaurant) => (
-                    <RestaurantCard key={restaurant?.info?.id} resData={restaurant}/>
+                    <Link key={restaurant?.info?.id} to={"/restaurant/"+restaurant?.info?.id}> 
+                        <RestaurantCard resData={restaurant}/> 
+                    </Link>
                 ))}
                 
             </div>

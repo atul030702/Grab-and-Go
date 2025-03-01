@@ -4,7 +4,6 @@ async function listOfRestaurantsJS() {
     );
 
     const jsonData = await response.json();
-    console.log(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     return restaurantArray = jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
 }
 
