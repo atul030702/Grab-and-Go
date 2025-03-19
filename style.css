@@ -243,3 +243,27 @@
         };
     };
 }
+
+.user-card{
+    max-width: max-content;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-block: 10px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+}
+
+.increase-btn{
+    width: max-content;
+    height: min-content;
+    padding: 5px 10px;
+    background-color: #0078d7;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
