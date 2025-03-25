@@ -4,6 +4,7 @@ import { searchIcon } from "../utils/constants.js";
 import Shimmer from "./Shimmer.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const Body = () => {
     //local state variable - super powerful variable
@@ -20,6 +21,11 @@ const Body = () => {
         }
         fetchData();
     }, []);
+
+    const onlineStatus = useOnlineStatus();
+    if(onlineStatus === false) {
+        return <h1>Looks like you are offline! Please check your internet connection...</h1>
+    }
 
     //Conditional rendering (Till the data is being fetched from api, we will show loader or anything here)
     return listOfRestaurants.length === 0 ? < Shimmer /> : (

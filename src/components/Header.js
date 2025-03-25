@@ -1,10 +1,12 @@
 import { brandLogo } from "../utils/constants.js";
 import { useState } from "react";
 import { Link } from "react-router";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const Header = () => {
 
     const [btnNameReact, setBtnNameReact] = useState("LogIn");
+    const onlineStatus = useOnlineStatus();
 
     return (
         <div className="header">
@@ -22,14 +24,18 @@ const Header = () => {
                     <li>
                         <Link to="/contact">Contact Us</Link>
                     </li>
-                    <li>Cart</li>
+                    <li>
+                        <Link to="/grocery">Grocery</Link>
+                    </li>
+                  
                     <button className="login-btn" onClick={() => {
                         btnNameReact === "LogIn" 
                             ? setBtnNameReact("LogOut") 
                             : setBtnNameReact("LogIn");
-                    }}>
+                        }}>
                         { btnNameReact }
                     </button>
+                
                 </ul>
             </div>
         </div>
