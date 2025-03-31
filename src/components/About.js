@@ -40,7 +40,7 @@ const About = () => {
                     </h4>
                 </div>
                 <div>
-                    <img src={foodIcon} alt="food-icon" className="w-[350px] h-[450px]"/>
+                    <img src={foodIcon} alt="food-icon" loading="lazy" className="w-[350px] h-[450px]"/>
                 </div>
             </div>
             
