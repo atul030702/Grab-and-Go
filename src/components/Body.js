@@ -29,30 +29,33 @@ const Body = () => {
 
     //Conditional rendering (Till the data is being fetched from api, we will show loader or anything here)
     return listOfRestaurants.length === 0 ? < Shimmer /> : (
-        <div className="body">
-            <div className="filter">
-                <div className="search-area">
+        <div className="body w-full flex-col size-full">
+            <div className="flex items-center justify-between">
+                <div className="flex m-4 p-4">
                     <input 
+                        className="m-4 p-2.5 text-xl rounded-xl 
+                        capitalize border-2 border-solid border-black
+                        font-semibold"
                         type="text" 
                         placeholder="search for restaurant..." 
-                        value={searchText} className="inputbox-search" 
+                        value={searchText}  
                         onChange={(e) => {
                             setSearchText(e.target.value);
                         }
                     }/>
-                    <button className="search-btn" onClick={() => {
-                        console.log(searchText);
-                        const filteredRestaurant = listOfRestaurants.filter((res) => {
-                           return res?.info?.name.toLowerCase().trim().includes(searchText.toLowerCase().trim());
-                        });
-                        setFilteredRestaurants(filteredRestaurant);
-                    }}> 
-                        <img src={searchIcon} alt="search-Icon" className="search-icon"/> 
+                    <button className="m-1.5 px-2 py-0.5 rounded-xl cursor-pointer" 
+                        onClick={() => {
+                            const filteredRestaurant = listOfRestaurants.filter((res) => {
+                            return res?.info?.name.toLowerCase().trim().includes(searchText.toLowerCase().trim());
+                            });
+                            setFilteredRestaurants(filteredRestaurant);
+                        }}> 
+                        <img src={searchIcon} alt="search-Icon" className="size-10"/> 
                     </button>
                 </div>
 
                 <button 
-                className="filter-btn" 
+                className="filter-btn px-4 py-2 bg-[#0078d7] rounded-xl cursor-pointer font-semibold" 
                 onClick={() => {
                     const filteredList = listOfRestaurants.filter(
                         (res) => res?.info?.avgRating >= 4.3
@@ -63,7 +66,7 @@ const Body = () => {
                     Top Rated Restaurants
                 </button>
             </div>
-            <div className="restaurant-container">
+            <div className="flex w-full items-center justify-between flex-wrap">
             
                 {filteredRestaurants.map((restaurant) => (
                     <Link key={restaurant?.info?.id} to={"/restaurant/"+restaurant?.info?.id}> 
