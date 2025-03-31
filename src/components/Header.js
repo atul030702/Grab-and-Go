@@ -19,13 +19,10 @@ const Header = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li className="px-4">
-                        <Link to="/about">About Us</Link>
+                        <Link to="/about">About</Link>
                     </li>
                     <li className="px-4">
-                        <Link to="/contact">Contact Us</Link>
-                    </li>
-                    <li className="px-4">
-                        <Link to="/grocery">Grocery</Link>
+                        <Link to="/contact">Contact</Link>
                     </li>
                   
                     <button className="login-btn px-4" onClick={() => {

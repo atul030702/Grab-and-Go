@@ -10,8 +10,8 @@ const RestaurantCard = (props) => {
     };
 
     return (
-        <div className="flex justify-center items-start flex-col m-4 p-2.5 w-[285px] h-min cursor-pointer rounded-xl 
-            shadow-[-1px_5px_10px_5px_rgba(112,112,112,0.2)] hover:scale-[0.98]"
+        <div className="flex justify-center items-start flex-col m-4 p-2.5 w-[285px] h-min bg-[#f5f5f5] 
+            cursor-pointer rounded-xl shadow-[-1px_5px_10px_5px_rgba(112,112,112,0.2)] hover:scale-[0.98]"
         >
             <img src={ imageURL } alt="restaurant-food-images"className="w-[275px] h-[185px] rounded-xl"/>
 

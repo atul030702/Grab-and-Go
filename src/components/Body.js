@@ -7,7 +7,6 @@ import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const Body = () => {
-    //local state variable - super powerful variable
     const [listOfRestaurants, setListOfRestaurant] = useState([]);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
@@ -27,7 +26,6 @@ const Body = () => {
         return <h1>Looks like you are offline! Please check your internet connection...</h1>
     }
 
-    //Conditional rendering (Till the data is being fetched from api, we will show loader or anything here)
     return listOfRestaurants.length === 0 ? < Shimmer /> : (
         <div className="body w-full flex-col size-full">
             <div className="flex items-center justify-between">
