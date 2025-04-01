@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard.js";
 import listOfRestaurantsJS from "../utils/resList.js";
-import { searchIcon } from "../utils/constants.js";
-import Shimmer from "./Shimmer.js";
+
+import { Shimmer } from "./Shimmer.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
@@ -27,13 +27,13 @@ const Body = () => {
     }
 
     return listOfRestaurants.length === 0 ? < Shimmer /> : (
-        <div className="body w-full flex-col size-full">
+        <div className="body w-full flex-col">
             <div className="flex items-center justify-between">
-                <div className="flex m-4 p-4">
+                <div className="flex m-4 p-4 flex-grow">
                     <input 
-                        className="m-4 p-2.5 text-xl rounded-xl 
-                        capitalize border-2 border-solid border-black
-                        font-semibold"
+                        className="w-[450px] m-4 mr-0 p-2 text-xl rounded-tl-xl rounded-bl-xl box-border
+                        capitalize border-1 border-solid border-#aabcca] focus:outline-none
+                        font-semibold focus:border-[#c26100]"
                         type="text" 
                         placeholder="search for restaurant..." 
                         value={searchText}  
@@ -41,14 +41,15 @@ const Body = () => {
                             setSearchText(e.target.value);
                         }
                     }/>
-                    <button className="m-1.5 px-2 py-0.5 rounded-xl cursor-pointer" 
+                    <button className="m-4 ml-0 px-3 rounded-tr-xl rounded-br-xl cursor-pointer bg-[#c26100] hover:bg-[#e73336] text-white" 
                         onClick={() => {
                             const filteredRestaurant = listOfRestaurants.filter((res) => {
                             return res?.info?.name.toLowerCase().trim().includes(searchText.toLowerCase().trim());
                             });
                             setFilteredRestaurants(filteredRestaurant);
-                        }}> 
-                        <img src={searchIcon} alt="search-Icon" className="size-10"/> 
+                        }}
+                    > 
+                        Search 
                     </button>
                 </div>
 
