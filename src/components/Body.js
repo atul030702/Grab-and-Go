@@ -29,7 +29,7 @@ const Body = () => {
     return (
         <div className="body w-full flex-col">
             <div className="flex items-center justify-between">
-                <div className="flex m-4 p-4 flex-grow">
+                <div className="flex m-4 p-4 pl-0 flex-grow">
                     <input 
                         className="w-[450px] m-4 mr-0 p-2 text-xl rounded-tl-xl rounded-bl-xl box-border
                         capitalize border-1 border-solid border-#aabcca] focus:outline-none
@@ -55,13 +55,12 @@ const Body = () => {
                 </div>
 
                 <button 
-                className="filter-btn px-4 py-2 bg-[#0078d7] rounded-xl cursor-pointer font-semibold" 
+                className="filter-btn m-2 mr-3.5 px-4 py-2 bg-[#c26100] rounded-xl cursor-pointer font-semibold text-white hover:bg-[#e73336]" 
                 onClick={() => {
                     const filteredList = listOfRestaurants.filter(
                         (res) => res?.info?.avgRating >= 4.3
                     );
                     setFilteredRestaurants(filteredList);
-                    console.log(filteredList);
                 }}>
                     Top Rated Restaurants
                 </button>
