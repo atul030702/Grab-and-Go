@@ -26,7 +26,7 @@ const Body = () => {
         return <h1>Looks like you are offline! Please check your internet connection...</h1>
     }
 
-    return listOfRestaurants.length === 0 ? < Shimmer /> : (
+    return (
         <div className="body w-full flex-col">
             <div className="flex items-center justify-between">
                 <div className="flex m-4 p-4 flex-grow">
@@ -41,6 +41,7 @@ const Body = () => {
                             setSearchText(e.target.value);
                         }
                     }/>
+
                     <button className="m-4 ml-0 px-3 rounded-tr-xl rounded-br-xl cursor-pointer bg-[#c26100] hover:bg-[#e73336] text-white" 
                         onClick={() => {
                             const filteredRestaurant = listOfRestaurants.filter((res) => {
@@ -67,11 +68,13 @@ const Body = () => {
             </div>
             <div className="flex w-full items-center justify-between flex-wrap">
             
-                {filteredRestaurants.map((restaurant) => (
-                    <Link key={restaurant?.info?.id} to={"/restaurant/"+restaurant?.info?.id}> 
-                        <RestaurantCard resData={restaurant}/> 
-                    </Link>
-                ))}
+                {listOfRestaurants.length === 0 ? < Shimmer /> : 
+                    filteredRestaurants.map((restaurant) => (
+                        <Link key={restaurant?.info?.id} to={"/restaurant/"+restaurant?.info?.id}> 
+                            <RestaurantCard resData={restaurant}/> 
+                        </Link>
+                    ))
+                }
                 
             </div>
         </div>
