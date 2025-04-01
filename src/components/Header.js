@@ -1,7 +1,7 @@
-import { brandLogo } from "../utils/constants.js";
 import { useState } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
+import brandIcon from "../assets/brand-logo.webp";
 
 const Header = () => {
 
@@ -9,29 +9,41 @@ const Header = () => {
     const onlineStatus = useOnlineStatus();
 
     return (
-        <div className="flex w-full bg-pink-100 justify-between shadow-lg mb-2">
-            <div className="logo-container">
-                <img src={brandLogo} alt="logo" className="w-55"/>
+        <div className="flex w-full h-[100px] bg-white-100 justify-between shadow-lg mb-2">
+            <div className="flex items-center justify-center">
+                <img src={brandIcon} alt="logo" className="w-[225px] h-[175px]"/>
             </div>
-            <div className="p-2 flex items-center" >
-                <ul className="flex w-full p-4 m-4 text-xl font-semibold">
-                    <li className="px-4">
-                        <Link to="/">Home</Link>
+            <div className="p-2 flex items-center gap-1" >
+                <ul className="flex justify-center items-center flex-grow flex-wrap w-full p-4 m-4 text-[22px] font-semibold">
+                    <li className="px-4 cursor:pointer hover:bg-[#d97919] rounded-xl hover:scale-[1.1]">
+                        <Link to="/">
+                            Home
+                        </Link>
                     </li>
-                    <li className="px-4">
-                        <Link to="/about">About</Link>
+                    <li className="px-4 cursor:pointer hover:bg-[#d97919] rounded-xl hover:scale-[1.1]">
+                        <Link to="/about">
+                            About
+                        </Link>
                     </li>
-                    <li className="px-4">
-                        <Link to="/contact">Contact</Link>
+                    <li className="px-4 cursor:pointer hover:bg-[#d97919] rounded-xl hover:scale-[1.1]">
+                        <Link to="/contact">
+                            Contact
+                        </Link>
                     </li>
                   
-                    <button className="login-btn px-4" onClick={() => {
+                    <button className="px-4 cursor:pointer hover:bg-[#d97919] rounded-xl hover:scale-[1.1]"
+                     onClick={() => {
                         btnNameReact === "LogIn" 
                             ? setBtnNameReact("LogOut") 
                             : setBtnNameReact("LogIn");
                         }}>
                         { btnNameReact }
+
                     </button>
+
+                    <li className="size-1 flex items-center justify-center">
+                        
+                    </li>
                 
                 </ul>
             </div>
