@@ -1,5 +1,5 @@
 import useRestaurantMenu from "../utils/useRestaurantMenu.js";
-import { Shimmer } from "./Shimmer.js";
+import { MenuShimmer } from "./Shimmer.js";
 import { useParams } from "react-router";
 
 import { resImageURL } from "../utils/constants.js";
@@ -44,7 +44,7 @@ const RestaurantMenu = () => {
     };
 
     return resInfo === null ? (
-        <Shimmer />
+        <MenuShimmer />
     ) : (
         <div className="flex flex-col justify-center items-center m-auto max-w-[850px] h-min">
             <div className="flex justify-start items-center bg-[#333333] mb-2.5 w-full">
@@ -87,9 +87,9 @@ const RestaurantMenu = () => {
 
                 {uniqueMenuItems.map((item) => (
                     <div key={item?.id} 
-                        className="flex justify-between items-center border-b-4 border-b-[#aaa] border-solid m-2.5 pt-0.5 h-150px w-full"
+                        className="flex justify-between items-center border-b-4 border-b-[#aaa] border-solid m-2.5 pt-0.5 h-max w-full"
                     >
-                        <div className="flex flex-col justify-center items-start flex-wrap text-[#545454] h-full">
+                        <div className="flex flex-col justify-center items-start flex-wrap text-[#545454] h-full mr-[5px]">
                             <h3 className="text-lg font-semibold">
                                 {item?.name}
                             </h3>
