@@ -38,7 +38,17 @@ const Body = () => {
                         placeholder="search for restaurant..." 
                         value={searchText}  
                         onChange={(e) => {
-                            setSearchText(e.target.value);
+                            const userInput = e.target.value;
+                            setSearchText(userInput);
+
+                            if(userInput.trim() === "") {
+                                return setFilteredRestaurants(listOfRestaurants);
+                            }else{
+                                const filterRestaurant = listOfRestaurants.filter((res) => {
+                                    return res?.info?.name.toLowerCase().includes(userInput.toLowerCase().trim());
+                                });
+                                setFilteredRestaurants(filterRestaurant);
+                            }
                         }
                     }/>
 
