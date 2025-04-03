@@ -1,9 +1,14 @@
+import { useState } from "react";
 import useRestaurantMenu from "../utils/useRestaurantMenu.js";
 import { MenuShimmer } from "./Shimmer.js";
 import { useParams } from "react-router";
 
 import { resImageURL } from "../utils/constants.js";
 import starIcon from "../assets/star-rating.svg";
+import vegIcon from "../assets/veg.svg";
+import nonVegIcon from "../assets/non-veg.svg";
+import arrowUpIcon from "../assets/arrowUp.svg";
+import arrowDownIcon from "../assets/arrowDown.svg";
 
 import { MENU_ITEM_TYPE_KEY } from "../utils/constants.js";
 import { resImageURL } from "../utils/constants.js";
@@ -11,6 +16,21 @@ import { resImageURL } from "../utils/constants.js";
 const RestaurantMenu = () => {
     const {resId} = useParams();
     const resInfo = useRestaurantMenu(resId);
+    const [showItems, setShowItems] = useState(true);
+
+    function handleClick() {
+        setShowItems(!showItems);
+    }
+    function toggleIcon(boolean) {
+        return boolean === true ? arrowUpIcon : arrowDownIcon;
+    }
+
+    function returnVegIcon(classifier) {
+        return classifier === "VEG" ? vegIcon : nonVegIcon;
+    }
+    function returnBestseller(boolean) {
+        return boolean === true ? "Bestseller" : ""
+    }
 
     const restaurantHeadInfo = resInfo?.cards?.[2]?.card?.card?.info;
     const {
@@ -46,7 +66,7 @@ const RestaurantMenu = () => {
     return resInfo === null ? (
         <MenuShimmer />
     ) : (
-        <div className="flex flex-col justify-center items-center m-auto max-w-[850px] h-min">
+        <div className="flex flex-col justify-center items-center m-auto max-w-1/2 h-max">
             <div className="flex justify-start items-center bg-[#333333] mb-2.5 w-full">
                 <div className="flex">
                     <img src={`${resImageURL}${cloudinaryImageId}`} draggable="false" alt="restaurant-icon" className="w-[250px] h-44 rounded-[5px] m-5" loading="lazy" />
@@ -76,26 +96,55 @@ const RestaurantMenu = () => {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center w-full mt-5">
-                <div className="w-full flex flex-col justify-center items-start p-5 pl-0">
-                    <h2 className="text-lg font-semibold">
-                        Recommended
-                    </h2>
-                    <p className="font-medium text-[16px] text-[#545454]">
-                        {uniqueMenuItems.length} ITEMS
-                    </p>
+                <div className="flex w-full justify-between items-center border-b-4 border-solid border-b-gray-200">
+                    <div className="w-full flex justify-start items-center p-5 pl-0 gap-2">
+                        <h2 className="text-lg font-semibold">
+                            Recommended
+                        </h2>
+                        <p className="font-medium text-[16px] text-[#545454]">
+                            ({uniqueMenuItems.length} Items)
+                        </p>
+                    </div>
+                    <div className="flex justify-end items-center w-full">
+                        <button onClick={handleClick} className="cursor-pointer hover:scale-[1.2]">
+                            <img src={toggleIcon(showItems)} alt="toggle-icon" draggable="false" />
+                        </button>
+                    </div>
                 </div>
 
                 {uniqueMenuItems.map((item) => (
                     <div key={item?.id} 
-                        className="flex justify-between items-center border-b-4 border-b-[#aaa] border-solid m-2.5 pt-0.5 h-max w-full"
+                        className={`${showItems ? "expanded" : "collapsed"} menu-item flex justify-between items-center border-b-4 border-b-[#aaa] border-solid m-2.5 py-2.5 min-h-max w-full`}
                     >
-                        <div className="flex flex-col justify-center items-start flex-wrap text-[#545454] h-full mr-[5px]">
+                        <div className="w-full flex flex-col justify-center items-start flex-wrap text-[#545454] h-max mr-[5px] py-3">
+                            <div className="flex justify-start items-center mt-1 gap-2.5">
+                                <img src={returnVegIcon(item?.itemAttribute?.vegClassifier)} alt={item?.itemAttribute?.vegClassifier} />
+                                <p className="text-red-500 italic font-medium">
+                                    {returnBestseller(item?.isBestseller)}
+                                </p>
+                            </div>
                             <h3 className="text-lg font-semibold">
                                 {item?.name}
                             </h3>
                             <p className="text-[16px] p-0.5 font-medium">
                                 ₹{(item?.price || item?.defaultPrice || item?.cost)/100}
                             </p>
+                            {item?.ratings?.aggregatedRating &&
+                                typeof item?.ratings?.aggregatedRating === "object" &&
+                                Object.keys(item?.ratings?.aggregatedRating).length > 0 ? (
+                                <div className="flex justify-start items-center gap-2">
+                                    <div className="flex justify-start items-center px-1 py-0.5 rounded-[5px] text-white"
+                                        style={{backgroundColor: returnBgColor(item?.ratings?.aggregatedRating?.rating)}}
+                                    >
+                                        <img src={starIcon} alt="rating-icon"/>
+                                        <p>{item?.ratings?.aggregatedRating?.rating}</p>
+                                    </div>
+                                    <p>
+                                    ({item?.ratings?.aggregatedRating?.ratingCountV2})
+                                    </p>
+                                </div>
+                            ) : null}
+
                             <p className="mt-2.5 text-[16px] font-light">
                                 {item?.description}
                             </p>

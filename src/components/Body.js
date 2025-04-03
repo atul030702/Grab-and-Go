@@ -35,7 +35,7 @@ const Body = () => {
                         capitalize border-1 border-solid border-#aabcca] focus:outline-none
                         font-semibold focus:border-[#c26100]"
                         type="text" 
-                        placeholder="search for restaurant..." 
+                        placeholder="search for a restaurant or dish..." 
                         value={searchText}  
                         onChange={(e) => {
                             const userInput = e.target.value;
@@ -45,7 +45,8 @@ const Body = () => {
                                 return setFilteredRestaurants(listOfRestaurants);
                             }else{
                                 const filterRestaurant = listOfRestaurants.filter((res) => {
-                                    return res?.info?.name.toLowerCase().includes(userInput.toLowerCase().trim());
+                                    return res?.info?.name.toLowerCase().includes(userInput.toLowerCase().trim()) || 
+                                    res?.info?.cuisines?.join("").toLowerCase().includes(userInput.toLowerCase().trim());
                                 });
                                 setFilteredRestaurants(filterRestaurant);
                             }

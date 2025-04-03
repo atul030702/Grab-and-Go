@@ -16,3 +16,25 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+.menu-item{
+    height: auto;
+    max-height: 25000px;
+    opacity: 1;
+    overflow: hidden;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.75s ease-in-out, 
+                opacity 0.75s ease-in-out,
+                max-height 0.75s ease-in-out;
+}
+.menu-item.expanded{
+    transform: scaleY(1.1);
+    opacity: 1;
+    max-height: 25000px;
+}
+.menu-item.collapsed{
+    transform: scaleY(0);
+    opacity: 0;
+    max-height: 0;
+}
