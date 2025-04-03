@@ -17,6 +17,7 @@ const RestaurantMenu = () => {
     const {resId} = useParams();
     const resInfo = useRestaurantMenu(resId);
     const [showItems, setShowItems] = useState(true);
+    const [showDescription, setShowDescription] = useState(null);
 
     function handleClick() {
         setShowItems(!showItems);
@@ -55,9 +56,7 @@ const RestaurantMenu = () => {
         if(!uniqueMenuItems.find(x => x.id === item.id)) {
             uniqueMenuItems.push(item);
         }
-    })
-    console.log(uniqueMenuItems);
-    
+    })  
 
     const returnBgColor = (rating) => {
         return rating >= 4 ? "#00ad1d" : "#ec3838";
@@ -145,14 +144,24 @@ const RestaurantMenu = () => {
                                 </div>
                             ) : null}
 
-                            <p className="mt-2.5 text-[16px] font-light">
-                                {item?.description}
-                            </p>
+                            <button onClick={() => setShowDescription(showDescription === item?.id ? null : item?.id)}
+                                className="cursor-pointer border-2 border-solid border-gray-300 px-1.5 py-0.5 mt-1.5 rounded-xl transition hover:bg-gray-200"
+                            >
+                                {showDescription === item?.id ? "Hide Description" : "See Description"}
+                            </button>
+
+                            {showDescription === item?.id && (
+                                <div className="flex flex-col justify-center items-start">
+                                    <p className="mt-2.5 text-[16px] font-light">
+                                        {item?.description}
+                                    </p>
+                                </div>
+                            )}
                         </div>
                         <div className="w-80 flex flex-col items-end justify-center h-full">
                             <img src={`${resImageURL}${item?.imageId}`} alt={item?.name} className="size-[100px] rounded-[5px] m-0.5" draggable="false" loading="lazy" />
                             
-                            <button className="text-lg rounded-[5px] bg-[#d97919] py-1.5 px-4 my-2.5 cursor-pointer w-[100px] text-black hover:scale-[1.1] transition">
+                            <button className="text-lg rounded-[5px] bg-gray-300 py-1.5 px-4 my-2.5 cursor-pointer w-[100px] text-black hover:bg-gray-100 transition">
                                 ADD +
                             </button>
                             
