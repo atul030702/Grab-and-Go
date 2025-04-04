@@ -145,19 +145,21 @@ const RestaurantMenu = () => {
                                 </div>
                             ) : null}
 
-                            <button onClick={() => setShowDescription(showDescription === item?.id ? null : item?.id)}
-                                className="description-btn cursor-pointer border-2 border-solid border-gray-300 px-1.5 py-0.5 mt-1.5 rounded-xl transition hover:bg-gray-200"
-                            >
-                                {showDescription === item?.id ? "Hide Description" : "See Description"}
-                            </button>
+                            <div className="w-full h-full flex flex-col items-start justify-center">
+                                <button onClick={() => setShowDescription(showDescription === item?.id ? null : item?.id)}
+                                    className="description-btn cursor-pointer border-2 border-solid border-gray-300 px-1.5 py-0.5 mt-1.5 rounded-xl transition hover:bg-gray-200"
+                                >
+                                    {showDescription === item?.id ? "Hide Description" : "See Description"}
+                                </button>
 
-                            {showDescription === item?.id && (
-                                <div className="description flex flex-col justify-center items-start w-full">
-                                    <p className="mt-2.5 text-[16px] font-light">
-                                        {item?.description || "No description available"} 
-                                    </p>
-                                </div>
-                            )}
+                                {showDescription === item?.id && (
+                                    <div className="description flex flex-wrap flex-col justify-center items-start w-full">
+                                        <p className="mt-2.5 text-[16px] font-light">
+                                            {item?.description || "No description available"} 
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                         <div className="img-add-div w-80 flex flex-col items-center justify-start h-full">
                             <img src={`${resImageURL}${item?.imageId}`} alt={item?.name} className="size-[100px] rounded-[5px] m-0.5" draggable="false" loading="lazy" />
