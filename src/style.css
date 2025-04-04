@@ -221,5 +221,58 @@
         };
     }
 
+    .about-container{
+        margin: 5px;
 
+        .about-content{
+            flex-direction: column;
+        };
+    }
+    .profile-div{
+        margin: 15px 10px;
+        padding: 5px;
+
+        .profile-btn{
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        };
+    }
+    .about-text{
+        margin: 10px 5px;
+        align-items: center;
+
+        h1{
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 10px;
+
+            span{
+                padding: 0 7.5px;
+            };
+        };
+        h4{
+            font-size: 20px;
+        }
+    }
+
+    .aboutMe-div{
+        padding: 10px;
+    }
+
+    .contact-div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+
+        input, textarea{
+            margin: 5px auto;
+            padding: 5px 10px;
+            border: 2px solid #c26100;
+        };
+        button{
+            margin: 5px 0;
+            padding: 5px 10px;
+        };
+    }
 }

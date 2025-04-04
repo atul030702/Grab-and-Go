@@ -2,7 +2,7 @@ import contactIcon from "../assets/contact.svg";
 
 const ContactUS = () => {
     return (
-        <div className="flex justify-evenly items-center w-max h-max m-auto p-2 flex-wrap">
+        <div className="contact-div flex justify-evenly items-center w-max h-max m-auto p-2 flex-wrap">
             <div className="flex h-[300px] w-[300px] justify-center items-end">
                 <img src={contactIcon} alt="contact-Icon" className="size-75" draggable="false" loading="lazy"/>
             </div>
