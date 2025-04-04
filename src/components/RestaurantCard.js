@@ -10,8 +10,8 @@ const RestaurantCard = (props) => {
     };
 
     return (
-        <div className="flex justify-center items-start flex-col m-4 p-2.5 w-[285px] h-min bg-[#f5f5f5] 
-            cursor-pointer rounded-xl shadow-[-1px_5px_10px_5px_rgba(112,112,112,0.2)] hover:scale-[0.98] transition"
+        <div className="restaurant-card flex justify-center items-start flex-col m-4 p-2.5 w-[285px] h-min bg-[#f5f5f5] 
+            cursor-pointer rounded-xl shadow-[-1px_5px_10px_5px_rgba(112,112,112,0.2)] hover:scale-[0.95] transition"
         >
             <img src={ imageURL } alt="restaurant-food-images"className="w-[275px] h-[185px] rounded-xl"/>
 
@@ -19,8 +19,8 @@ const RestaurantCard = (props) => {
                 {resData?.info?.name}
             </h3>
 
-            <div className="flex justify-start p-1 gap-1 w-full text-base font-semibold">
-                <div className="flex w-fit h-min mx-1 py-0.5 px-1.5 rounded-lg gap-0.5 text-white"
+            <div className="details flex justify-start p-1 gap-1 w-full text-base font-semibold">
+                <div className="ratings flex w-fit h-min mx-1 py-0.5 px-1.5 rounded-lg gap-0.5 text-white"
                     style={{backgroundColor: returnBgColor(resData?.info?.avgRating)}}
                 >
                     <img src={starIcon} alt="star-icon" className="size-[22px]"/>
@@ -32,7 +32,7 @@ const RestaurantCard = (props) => {
                 </ul>
             </div>
             
-            <h5 className="text-[15px] flex flex-wrap px-0.5">
+            <h5 className="cuisine text-[15px] flex flex-wrap px-0.5">
                 {resData?.info?.cuisines.join(", ")}
             </h5>
         </div>

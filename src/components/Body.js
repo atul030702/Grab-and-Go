@@ -28,11 +28,10 @@ const Body = () => {
 
     return (
         <div className="body w-full flex-col">
-            <div className="flex items-center justify-between">
-                <div className="flex m-4 p-4 pl-0 flex-grow">
+            <div className="body-header flex items-center justify-between flex-wrap">
+                <div className="search-area flex m-4 p-4 pl-0 flex-grow">
                     <input 
-                        className="w-[450px] m-4 mr-0 p-2 text-xl rounded-tl-xl rounded-bl-xl box-border
-                        capitalize border-1 border-solid border-#aabcca] focus:outline-none
+                        className="inputbox w-[450px] m-4 mr-0 p-2 text-xl rounded-tl-xl rounded-bl-xl box-border capitalize border-1 border-solid border-[#aabcca] focus:outline-none
                         font-semibold focus:border-[#c26100]"
                         type="text" 
                         placeholder="search for a restaurant or dish..." 
@@ -53,7 +52,7 @@ const Body = () => {
                         }
                     }/>
 
-                    <button className="m-4 ml-0 px-3 rounded-tr-xl rounded-br-xl cursor-pointer bg-[#c26100] hover:bg-[#e73336] text-white" 
+                    <button className="search-btn m-4 ml-0 px-3 rounded-tr-xl rounded-br-xl cursor-pointer bg-[#c26100] hover:bg-[#e73336] text-white" 
                         onClick={() => {
                             const filteredRestaurant = listOfRestaurants.filter((res) => {
                             return res?.info?.name.toLowerCase().trim().includes(searchText.toLowerCase().trim());
@@ -69,21 +68,21 @@ const Body = () => {
                 className="filter-btn m-2 mr-3.5 px-4 py-2 bg-[#c26100] rounded-xl cursor-pointer font-semibold text-white hover:bg-[#e73336]" 
                 onClick={() => {
                     const filteredList = listOfRestaurants.filter(
-                        (res) => res?.info?.avgRating >= 4.3
+                        (res) => res?.info?.avgRating > 4.0
                     );
                     setFilteredRestaurants(filteredList);
                 }}>
                     Top Rated Restaurants
                 </button>
             </div>
-            <div className="flex w-full items-center justify-between flex-wrap">
+            <div className="restaurants flex w-full items-center justify-between flex-wrap">
             
-                {listOfRestaurants.length === 0 ? < Shimmer /> : 
-                    filteredRestaurants.map((restaurant) => (
+                {listOfRestaurants.length === 0 ? (< Shimmer />) : 
+                    (filteredRestaurants.map((restaurant) => (
                         <Link key={restaurant?.info?.id} to={"/restaurant/"+restaurant?.info?.id}> 
                             <RestaurantCard resData={restaurant}/> 
                         </Link>
-                    ))
+                    )))
                 }
                 
             </div>
