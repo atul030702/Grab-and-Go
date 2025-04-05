@@ -57,7 +57,7 @@ const RestaurantMenu = () => {
             uniqueMenuItems.push(item);
         }
     })  
-    console.log(uniqueMenuItems);
+    //console.log(uniqueMenuItems);
 
     const returnBgColor = (rating) => {
         return rating >= 4 ? "#00ad1d" : "#ec3838";
@@ -161,7 +161,7 @@ const RestaurantMenu = () => {
                                 )}
                             </div>
                         </div>
-                        <div className="img-add-div w-80 flex flex-col items-center justify-start h-full">
+                        <div className="img-add-div w-80 flex flex-col items-end justify-center h-full">
                             <img src={`${resImageURL}${item?.imageId}`} alt={item?.name} className="size-[100px] rounded-[5px] m-0.5" draggable="false" loading="lazy" />
                             
                             <button className="add-btn text-lg rounded-[5px] bg-gray-300 py-1.5 px-4 my-2.5 cursor-pointer w-[100px] text-black hover:bg-gray-100 transition">
