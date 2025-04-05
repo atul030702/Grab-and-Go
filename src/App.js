@@ -6,6 +6,7 @@ import Body from "./components/Body.js";
 import ContactUS from "./components/Contact.js";
 import Error from "./components/Error.js";
 import RestaurantMenu from "./components/RestaurantMenu.js";
+import Footer from "./components/Footer.js";
 import "../src/style.css";
 
 const About = lazy(() => import("./components/About.js") );
@@ -21,6 +22,24 @@ const AppLayout = () => {
     )
 };
 
+const HomePage = () => {
+    return (
+        <>
+            <Body />
+            <Footer />
+        </>
+    );
+};
+
+const AboutPage = () => {
+    return (
+        <>
+            <About />
+            <Footer />
+        </>
+    );
+};
+
 const appRouter = createBrowserRouter([
     {
         path: "/",
@@ -28,12 +47,12 @@ const appRouter = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Body />
+                element: <HomePage />
             },
             {
                 path: "/about",
                 element: <Suspense fallback={<h1>Loading...</h1>}>
-                    <About />
+                    <AboutPage />
                 </Suspense>
             },
             {

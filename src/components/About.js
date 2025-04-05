@@ -8,7 +8,7 @@ const About = () => {
     const [visible, setVisible] = useState(false);
 
     return (
-        <div className="about-container flex flex-col overflow-x-hidden">
+        <div className="about-container flex flex-col flex-grow overflow-hidden">
             <div className="profile-div m-3.5 p-1.5 flex flex-col w-full items-center justify-center text-[22px] font-semibold"
             >
                 <button className="profile-btn w-max bg-[#d97919] py-1.5 px-2.5 rounded-xl hover:bg-[#c26100] cursor-pointer"
@@ -22,7 +22,7 @@ const About = () => {
                 { visible && <AboutMe /> }
             </div>
 
-            <div className="about-content w-full h-max flex justify-center items-center p-5 m-2.5">
+            <div className="about-content w-full flex justify-center items-center p-5 m-2.5">
                 <div className="about-text flex flex-col justify-center items-start flex-wrap text-gray-800">
                     <h1 className="text-6xl my-1">
                         Welcome to<br/>
