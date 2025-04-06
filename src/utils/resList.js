@@ -4,11 +4,11 @@ async function listOfRestaurantsJS() {
     );*/
     const response = await fetch("/api/getRestaurant");
     const jsonData = await response.json();
-    console.log(jsonData);
+    return jsonData;
 
-    const restaurantArray = jsonData?.data?.cards?.[1].card?.card?.gridElements?.infoWithStyle?.restaurants;
+    /*const restaurantArray = jsonData?.data?.cards?.[1].card?.card?.gridElements?.infoWithStyle?.restaurants;
     console.log(restaurantArray);
-    return Array.isArray(restaurantArray) ? restaurantArray : [];
+    return Array.isArray(restaurantArray) ? restaurantArray : [];*/
 }
 
 export default listOfRestaurantsJS;
