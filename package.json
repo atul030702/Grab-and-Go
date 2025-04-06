@@ -22,7 +22,8 @@
   "homepage": "https://github.com/atul030702/namaste_react#readme",
   "devDependencies": {
     "parcel": "^2.13.3",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "svgo": "^3.3.2"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.16",
@@ -32,6 +33,6 @@
     "tailwindcss": "^4.0.16"
   },
   "browsersList": [
-    "Last 2 versions"
+    "defaults"
   ]
 }
