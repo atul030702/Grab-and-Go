@@ -7,6 +7,7 @@ async function listOfRestaurantsJS() {
     console.log(jsonData);
 
     const restaurantArray = jsonData?.data?.cards?.[1].card?.card?.gridElements?.infoWithStyle?.restaurants;
+    console.log(restaurantArray);
     return Array.isArray(restaurantArray) ? restaurantArray : [];
 }
 
