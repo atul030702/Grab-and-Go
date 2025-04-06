@@ -4,6 +4,7 @@ async function listOfRestaurantsJS() {
     );*/
     const response = await fetch("/api/getRestaurant");
     const jsonData = await response.json();
+    console.log(jsonData);
 
     const restaurantArray = jsonData?.data?.cards?.[1].card?.card?.gridElements?.infoWithStyle?.restaurants;
     return Array.isArray(restaurantArray) ? restaurantArray : [];
