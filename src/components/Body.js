@@ -27,7 +27,7 @@ const Body = () => {
     }
 
     return (
-        <div className="body w-full flex-col">
+        <div className="body w-full flex-col mb-15">
             <div className="body-header flex items-center justify-between flex-wrap">
                 <div className="search-area flex m-4 p-4 pl-0 flex-grow">
                     <input 

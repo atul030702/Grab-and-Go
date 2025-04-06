@@ -40,6 +40,24 @@ const AboutPage = () => {
     );
 };
 
+const ContactPage = () => {
+    return (
+        <>
+            <ContactUS />
+            <Footer />
+        </>
+    );
+};
+
+const MenuPage = () => {
+    return (
+        <>
+            <RestaurantMenu />
+            <Footer />
+        </>
+    );
+};
+
 const appRouter = createBrowserRouter([
     {
         path: "/",
@@ -57,11 +75,11 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/contact",
-                element: <ContactUS />
+                element: <ContactPage />
             },
             {
                 path: "/restaurant/:resId",
-                element: <RestaurantMenu />
+                element: <MenuPage />
             }
         ],
         errorElement: <Error />,

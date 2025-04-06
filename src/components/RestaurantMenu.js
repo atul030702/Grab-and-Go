@@ -56,8 +56,7 @@ const RestaurantMenu = () => {
         if(!uniqueMenuItems.find(x => x.id === item.id)) {
             uniqueMenuItems.push(item);
         }
-    })  
-    //console.log(uniqueMenuItems);
+    })
 
     const returnBgColor = (rating) => {
         return rating >= 4 ? "#00ad1d" : "#ec3838";
@@ -66,7 +65,7 @@ const RestaurantMenu = () => {
     return resInfo === null ? (
         <MenuShimmer />
     ) : (
-        <div className="restaurant-menu flex flex-col justify-center items-center m-auto max-w-[50%] h-max">
+        <div className="restaurant-menu flex flex-col justify-center items-center mx-auto mb-18 max-w-[50%] h-max">
             <div className="header flex justify-start items-center bg-[#333333] mb-2.5 w-full">
                 <div className="image-div flex">
                     <img src={`${resImageURL}${cloudinaryImageId}`} draggable="false" alt="restaurant-icon" className="res-image w-[250px] h-44 rounded-[5px] m-5" loading="lazy" />

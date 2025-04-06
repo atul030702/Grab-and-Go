@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
 
-
-
-
 const useOnlineStatus = () => {
     const [onlineStatus, setOnlineStatus] = useState(true)
 
-    //check if user is online or not
     useEffect(() => {
         const handleOnline = () => setOnlineStatus(true);
         const handleOffline = () => setOnlineStatus(false);
@@ -20,7 +16,6 @@ const useOnlineStatus = () => {
         };
     }, [])
 
-    //return a boolean value
     return onlineStatus;
 };
 
