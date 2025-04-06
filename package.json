@@ -4,7 +4,7 @@
   "description": "This is a folder for Atul to learn react.js",
   "scripts": {
     "start": "parcel index.html --port 5000",
-    "build": "parcel build index.html --dist-dir build",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
