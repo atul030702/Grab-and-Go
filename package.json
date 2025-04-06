@@ -1,8 +1,8 @@
 {
-  "name": "namaste-react",
+  "name": "grab_and_go",
   "version": "1.0.0",
   "type": "module",
-  "description": "This is a folder for Atul to learn react.js",
+  "description": "Food ordering app using swiggy's api",
   "scripts": {
     "start": "parcel index.html --port 5000",
     "build": "parcel build index.html --dist-dir build",
@@ -10,17 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atul030702/namaste_react.git"
+    "url": "git+https://github.com/atul030702/Grab-and-Go.git"
   },
   "keywords": [
     "React"
   ],
-  "author": "Atul",
+  "author": "Atul Kumar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/atul030702/namaste_react/issues"
+    "url": "https://github.com/atul030702/Grab-and-Go/issues"
   },
-  "homepage": "https://github.com/atul030702/namaste_react#readme",
+  "homepage": "https://github.com/atul030702/Grab-and-Go#readme",
   "devDependencies": {
     "parcel": "^2.13.3",
     "process": "^0.11.10"
