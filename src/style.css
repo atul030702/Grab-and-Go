@@ -60,7 +60,7 @@
         margin-bottom: 10px;
     }
     .brand-logo{
-        width: 150px;
+        width: 100px;
         height: 100%;
         display: flex;
         margin-right: 5px;
@@ -76,19 +76,19 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        margin-left: 10px;
+        margin-left: 5px;
     }
     .header-text>ul{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        font-size: 15px;
-        gap: 7.5px;
-        margin-right: 10px;
+        font-size: 13px;
+        gap: 3px;
+        margin-right: 5px;
     }
     .header-text>ul>li, .login-btn{
-        padding: 3px 5px;
+        padding: 2.5px 4px;
     }
     .cart-icon{
         width: 25px;
@@ -98,6 +98,7 @@
     .body{
         width: 100%;
         min-height: min-content;
+        margin-bottom: 60px;
     }
     .body-header{
         flex-direction: column;
@@ -112,9 +113,10 @@
     }
     .search-area>.inputbox{
         padding: 5px 10px;
-        max-width: 325px;
+        max-width: 270px;
         border: 1px solid #aabcca;
         font-size: 18px;
+        font-weight: 400;
     }
     .search-area>.inputbox:focus{
         border: 1px solid #c26100;
@@ -229,7 +231,7 @@
         };
     }
     .profile-div{
-        margin: 15px 10px;
+        margin: 15px auto;
         padding: 5px;
 
         .profile-btn{
@@ -256,14 +258,26 @@
     }
 
     .aboutMe-div{
+        width: 300px;
         padding: 10px;
     }
 
     .contact-div{
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         margin: 10px auto;
+        flex-grow: 1;
+
+        .contact-text-area{
+            width: 320px;
+            height: max-content;
+            margin: 10px 0 40px 0; 
+        };
+
+        img{
+            display: none;
+        };
 
         input, textarea{
             margin: 5px auto;
@@ -274,5 +288,9 @@
             margin: 5px 0;
             padding: 5px 10px;
         };
+    }
+
+    .shimmer{
+        margin: 0 auto 60px auto;
     }
 }
