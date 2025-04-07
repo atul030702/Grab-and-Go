@@ -104,7 +104,7 @@ const RestaurantMenu = () => {
                             ({uniqueMenuItems.length} Items)
                         </p>
                     </div>
-                    <div className="flex justify-end items-center w-full">
+                    <div className="toggle-btn flex justify-end items-center w-full">
                         <button onClick={handleClick} className="cursor-pointer hover:scale-[1.2]">
                             <img src={toggleIcon(showItems)} alt="toggle-icon" draggable="false" />
                         </button>

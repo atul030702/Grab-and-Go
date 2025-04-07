@@ -13,7 +13,7 @@ const CardShimmer = () => {
 
 export const MenuShimmer = () => {
     return (
-        <div className="flicker flex flex-col w-[50%] justify-between items-start bg-gray-50 mx-auto">
+        <div className="menu-shimmer flicker flex flex-col w-[50%] justify-between items-start bg-gray-50 mx-auto">
             <div className="flicker w-full h-55 flex justify-start items-center mb-2.5 bg-gray-400">
                 <div className="flicker w-62 h-44 rounded-[5px] m-4 bg-gray-100"></div>
                 <div className="flicker flex flex-col m-5 h-44 w-63 bg-gray-200">
