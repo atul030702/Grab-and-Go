@@ -6,7 +6,7 @@ const ContactUS = () => {
             <div className="flex h-[300px] w-[300px] justify-center items-end">
                 <img src={contactIcon} alt="contact-Icon" className="size-75" draggable="false" loading="lazy"/>
             </div>
-            <div className="flex flex-col items-center justify-center w-[450px] h-full m-2.5">
+            <div className="contact-text-area flex flex-col items-center justify-center w-[450px] h-full m-2.5">
                 <h1 className="text-5xl font-semibold w-max text-[#353535] text-center my-1">
                     Contact Us
                 </h1>

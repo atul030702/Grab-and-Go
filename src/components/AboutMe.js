@@ -5,12 +5,12 @@ import myImage from "../assets/me.webp";
 const AboutMe = () => {
 
     return (
-        <div className="aboutMe-div flex flex-col items-center justify-center my-5 p-2.5 rounded-xl
+        <div className="aboutMe-div flex flex-col items-center justify-center my-5 mx-auto p-2.5 rounded-xl
             w-max h-min shadow-[-1px_5px_10px_5px_rgba(112,112,112,0.2)]"
         >
             <h1 className="font-semibold text-3xl">About Me</h1>
             <img src={myImage} alt="profile-icon" loading="lazy" draggable="false" className="size-[150px] m-[5px] rounded-[50%]"/>
-            <p className="text-[18px] font-light text-[#575757] mx-[10px]">
+            <p className="text-[18px] font-light text-[#575757] mx-[10px] text-center">
                 React.js | JavaScript | Tailwind | Frontend Developer
             </p>
             <div className="flex justify-center items-center gap-2.5">

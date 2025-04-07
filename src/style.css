@@ -270,13 +270,13 @@
         flex-grow: 1;
 
         .contact-text-area{
-            width: 320px;
+            width: 100vw;
             height: max-content;
-            margin: 10px 0 40px 0; 
+            margin: 10px 5px 40px 5px; 
         };
 
         img{
-            display: none;
+            margin-bottom: 30px;
         };
 
         input, textarea{
