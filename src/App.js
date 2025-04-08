@@ -1,6 +1,8 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
+import { CartProvider } from "./utils/cartContext.js";
+import Cart from "./components/Cart.js";
 import Header from "./components/Header.js";
 import Body from "./components/Body.js";
 import ContactUS from "./components/Contact.js";
@@ -14,9 +16,7 @@ const About = lazy(() => import("./components/About.js") );
 const AppLayout = () => {
     return (
         <div className="app">
-            {/* Header */}
             <Header />
-            
             <Outlet />
         </div>
     )
@@ -78,6 +78,10 @@ const appRouter = createBrowserRouter([
                 element: <ContactPage />
             },
             {
+                path: "/cart",
+                element: <Cart />
+            },
+            {
                 path: "/restaurant/:resId",
                 element: <MenuPage />
             }
@@ -88,4 +92,8 @@ const appRouter = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter} />);
+root.render(
+    <CartProvider>
+        <RouterProvider router={appRouter} />
+    </CartProvider>
+);
