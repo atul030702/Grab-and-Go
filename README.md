@@ -36,8 +36,8 @@ Grab-and-Go/ ├── api/ # Serverless functions ├── public/ │ └─�
 
 ## 📧 Contact
 - **For any queries or feedback, feel free to reach out via email or connect on LinkedIn:**
-- **Email:** [singhatul0307@gmail.com](#) *(mailto: singhatul0307@gmail.com)*
-- **LinkedIn:** [LinkedIn Profile](#) *(https://www.linkedin.com/in/atul-kumar-b8a33b2a2/)*
+- **Email:** [singhatul0307@gmail.com](mailto: singhatul0307@gmail.com)
+- **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/atul-kumar-b8a33b2a2/)
 
 ---
 
